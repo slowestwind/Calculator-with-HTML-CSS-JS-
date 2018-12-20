@@ -1,0 +1,45 @@
+table{
+	font-weight: bold;
+	color: blue;
+	background-color: white;
+	border: white;
+	width: 500px;
+	
+}
+table td{
+	font-weight: bold;
+	border-color: black;
+	border: 20px solid black;
+	width: 90px;
+	text-align: center;
+	
+}
+#screen td{
+	width: 500px;
+	height: 100px;
+	background-color: white;
+	border-radius: 15px;
+	color: Black;
+	padding-right: 50px;
+	font-size: 30;
+}
+
+button{
+	font-weight: bold;
+	width: 80px;
+}
+
+input{
+	width 800px;
+	height: 60px;
+}
+#plusO td{
+	height: 300px;
+}
+div{
+	text-align: right;
+}
+
+#enter{
+	height: 100px;
+}

@@ -1,0 +1,139 @@
+<DOCTYPE html>
+<html lang="eng">
+
+	<head>
+		<!-- meta tags-->	
+		<meta name="author" content="SlowestWind" >
+		<meta charset="utf-8">
+		<title>Calculator</title>
+
+		<!-- link of stylesheet -->
+		<link rel="stylesheet" href="initial.css"> 		
+		<link rel="stylesheet" href="calculator.css">
+		
+		<!-- script-->		
+		<script type="text/javascript" >
+		  
+			<!-- Screen purely clearing funcntion-->
+		  function allClear() {
+				var cal=document.getElementById('display');
+				cal.textContent="";
+			}    	
+    	
+    		<!-- Appending of numbers to the previous number-->
+    		function append(num) {
+    			var cal=document.getElementById('display');
+    			var prev=cal.textContent;
+    			cal.textContent=prev+num;
+    		}
+    		
+    		<!--calculation of entered data using eval() function-->
+    		function calculation() {
+    			var cal=document.getElementById('display');
+    			var exp=cal.textContent;
+    			exp=eval(exp);
+    			cal.textContent=exp;
+    		}
+    		<!-- removing of one element-->
+    		function removeOne() {
+    			var cal=document.getElementById('display');
+    			var g=cal.textContent;
+    			cal.textContent=g.substr(0, g.length-1);
+    			
+    		}
+    	
+    	</script>	
+	<head>
+	
+	<body>
+
+		<h1><center>Calculator</center></h1>
+		
+		<table id="screen" align="center"> 
+				<tr>
+					<td>
+					<div id="screen_container">
+							<div id="display">					
+					</div>				
+					</td>				
+				</tr>
+		</table>
+	
+		<table align="center" id="numbers">
+
+        <tr id="Operator">
+				<td>
+					<button name="divideOp" value="/" onclick="append('/');">/</button>				
+				</td>
+				<td>
+					<button name="multOp" value="*" onclick="append('*');">*</button>				
+				</td> 
+				<td>
+					<button name="subOp" value="-" onclick="append('-');">-</button>				
+				</td>
+				<td>
+					<button name="addOp" value="+" onclick="append('+');">+</button>				
+				</td>         
+        </tr>
+						        
+			<tr id="number">
+				<td>
+					<button name="seven" value="7" onclick="append(7)">7</button>				
+				</td>
+				<td>
+					<button name="eight" value="8" onclick="append(8)">8</button>				
+				</td> 
+				<td>
+					<button name="nine" value="9" onclick="append(9)">9</button>				
+				</td> 
+				<td>
+					<button name="clear" value="C" onclick="allClear()">C</button>			
+				</td>         
+        </tr>        
+        
+        <tr id="number">
+				<td>
+					<button name="four" value="4" onclick="append(4)">4</button>				
+				</td>
+				<td>
+					<button name="five" value="5" onclick="append(5)">5</button>				
+				</td> 
+				<td>
+					<button name="six" value="6" onclick="append(6)">6</button>				
+				</td> 
+				<td>
+					<button name="sqrt" value="squrt" onclick="removeOne()"><-</button>				
+				</td>         
+        </tr>
+        <tr id="number">
+				<td>
+					<button name="one" value="1" onclick="append(1)">1</button>				
+				</td>				
+				<td>
+					<button name="two" value="2" onclick="append(2)">2</button>				
+				</td> 
+				<td>
+					<button name="three" value="3" onclick="append(3)">3</button>				
+				</td>
+				<td rowspan="2" >
+				
+					<button id="enter" name="Enter" value="enter" onclick="calculation()" >Enter</button> 			
+				</td>         
+        </tr>
+         
+        <tr id="number">
+				<td>
+					<button name="twozero" value="00" onclick="append('00')">00</button>				
+				</td>				
+				<td>
+					<button name="zero" value="0" onclick="append(0)">0</button>				
+				</td> 
+				<td>
+					<button name="decimal" value="." onclick="append(.)">.</button>				
+				</td>         
+        </tr>
+    	</table>
+    	
+		
+	</body>	
+</html>
